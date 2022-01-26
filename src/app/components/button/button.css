@@ -1,0 +1,36 @@
+@import url("../../../brand.css");
+
+.storybook-button {
+  font-weight: 700;
+  border: solid 2px var(--brand-color);
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  color: white;
+  background-color: var(--brand-color);
+}
+
+.storybook-button:hover {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  border: solid 2px var(--brand-color);
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}

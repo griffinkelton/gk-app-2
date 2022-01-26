@@ -1,3 +1,8 @@
+/* NCSU Brand */
+:host {
+  --logo: url(https://brand.ncsu.edu/img/logo/4x1white.jpg);
+  --brand-color: #cc0000;
+}
 /* Font Awesome Icons */
 @import url("https://dev-engage1-oswald.terradotta.com/_assets/css/font-awesome.min.css?v=TDS19.1-07212020");
 
@@ -6,13 +11,4 @@
 
 body {
   font-family: "Public Sans", sans-serif;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.33;
-  letter-spacing: normal;
 }
