@@ -1,0 +1,28 @@
+{
+  "plugins": [
+    {
+      "name": "@zeplin/cli-connect-angular-plugin"
+    },
+    {
+      "name": "@zeplin/cli-connect-storybook-plugin",
+      "config": {
+        "url": "http://localhost:6006/",
+        "startScript": "storybook"
+      }
+    }
+  ],
+  "projects": [
+    "61d5f289ed8d1e79ade68398"
+  ],
+  "components": [
+    {
+      "path": "src/app/components/button/button.component.ts",
+      "zeplinIds": [
+        "61d5f29d49b0f485fecf7dee"
+      ]
+    }
+  ],
+  "github": {
+    "repository": "griffinkelton/gk-app-2"
+  }
+}
