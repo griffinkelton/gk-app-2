@@ -4,9 +4,9 @@ import { Component, Input} from '@angular/core';
   selector: 'storybook-funnel-bar',
   template: `
   <div class="funnel">
-    <div class='funnel-title'>{{ title }}</div>
+  <div class='funnel-title'>{{ title }}</div>
     <div style='width:630px;'>
-    <storybook-funnel-descender *ngIf = "percentage < 100" [d0]="percentage/100" [p0]="parentPercentage*0.01*630"></storybook-funnel-descender>
+    <div class='svg'><storybook-funnel-descender *ngIf = "percentage < 100" [d0]="percentage/100" [p0]="parentPercentage*0.01*630"></storybook-funnel-descender></div>
     <div style='width: calc({{percentage}}*0.01*630px);'
       [ngClass]='[cssClass]'
       id="{{ id }}">

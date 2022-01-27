@@ -1361,16 +1361,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/funnel-bar/funnel-bar.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<sbFunnelBar>",
-                "defaultValue": "(args: sbFunnelBar) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1381,11 +1371,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/line/line.stories.ts",
+                "file": "src/app/components/funnel-bar/funnel-bar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<sbLineComponent>",
-                "defaultValue": "(args: sbLineComponent) => ({\n    props: args,\n  })"
+                "type": "Story<sbFunnelBar>",
+                "defaultValue": "(args: sbFunnelBar) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1396,6 +1386,16 @@
                 "deprecationMessage": "",
                 "type": "Story<sbHeaderComponent>",
                 "defaultValue": "(args: sbHeaderComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/line/line.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<sbLineComponent>",
+                "defaultValue": "(args: sbLineComponent) => ({\n    props: args,\n  })"
             },
             {
                 "name": "Template",

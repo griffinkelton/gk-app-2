@@ -4,12 +4,13 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 
 .funnel-title {
   margin-left: auto;
   padding: 0 50px;
+  width: 100px;
 }
 
 .funnel-percentage {
@@ -34,8 +35,4 @@
   font-size: 32px;
   font-weight: bolder;
   line-height: 1.25;
-}
-
-#targeted {
-  width: 630px;
 }

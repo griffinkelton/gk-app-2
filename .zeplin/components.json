@@ -18,11 +18,12 @@
     {
       "path": "src/app/components/button/button.component.ts",
       "zeplinIds": [
-        "61d5f29d49b0f485fecf7dee"
+        "61d5f29d49b0f485fecf7dee",
+        "61d5f29ee849298ddc4ff7c5"
       ]
     }
   ],
   "github": {
-    "repository": "griffinkelton/gk-app-2"
+    "repository": "griffinkelton/gk-app-td"
   }
 }

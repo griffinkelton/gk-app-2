@@ -5,7 +5,9 @@ module.exports = {
   ],
   "addons": [
     "@storybook/addon-links",
-    "@storybook/addon-essentials"
+    "@storybook/addon-essentials",
+    "@hover/storybook-addon-pseudo-states",
+    "storybook-zeplin/register"
   ],
   "framework": "@storybook/angular",
   "core": {

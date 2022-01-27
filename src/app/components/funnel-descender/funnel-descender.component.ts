@@ -41,7 +41,9 @@ readonly Oy: number = 0;
 readonly V: number = 36; //height
 
 @Input()
-p0: number; //width
+p0: number; //parentWidth
+
+firstBar: number = 630;
 
 bW0: number
 diff0: number;
@@ -55,11 +57,11 @@ d0: number;
 details: string;
 
 ngOnInit(): void {
-  this.bW0 = this.p0*this.d0; 189
-  this.diff0 = this.p0-this.bW0; 441
-  this.diff0x = this.diff0/2; 220.5
-  this.bRx = this.p0 - this.diff0x; 409.5
-  this.bLx = this.Ox + this.diff0x; 220.5
+  this.bW0 = this.firstBar * this.d0; // 441, 189, 94.5
+  this.diff0 = this.p0 - this.bW0; // 189, 441, 94.5
+  this.diff0x = this.diff0/2; // 94.5, 220.5, 47.25
+  this.bRx = this.p0 - this.diff0x; // 535.5, 409.5 --> 409 - 94.5 = 315, 141.25
+  this.bLx = this.Ox + this.diff0x; // 94.5, 220.5 --> 220.5 - 94.5 = 126, 47.25
   this.details = 'M '+ this.Ox + ' ' + this.Oy + ' H ' + this.p0 + ' L ' + this.bRx + ' ' + this.V + ' L ' + this.bLx + ' ' + this.V + ' Z';
 }
 }
