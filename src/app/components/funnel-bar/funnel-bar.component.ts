@@ -19,7 +19,7 @@ import { Component, Input} from '@angular/core';
   styleUrls: ['./funnel-bar.css'],
 })
 
-export class sbFunnelBar {
+export class sbFunnelBar{
 
   @Input()
   cssClass?: string;

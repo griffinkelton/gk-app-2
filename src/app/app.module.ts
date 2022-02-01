@@ -10,6 +10,7 @@ import { sbHeaderComponent } from './components/header/header.component';
 import { sbLineComponent } from './components/line/line.component';
 import { sbFunnelBar } from './components/funnel-bar/funnel-bar.component';
 import { sbFunnelDescender } from './components/funnel-descender/funnel-descender.component';
+import { contRatio } from './components/hexToRbg.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { sbFunnelDescender } from './components/funnel-descender/funnel-descende
     sbHeaderComponent,
     sbLineComponent,
     sbFunnelBar,
-    sbFunnelDescender
+    sbFunnelDescender,
+    contRatio
   ],
   imports: [
     BrowserModule,
