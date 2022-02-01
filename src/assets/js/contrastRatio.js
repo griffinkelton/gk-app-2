@@ -1,5 +1,3 @@
-// function from https://stackoverflow.com/a/5624139/3695983
-
 function hexToRgb(hex) {
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
     hex = hex.replace(shorthandRegex, function(m, r, g, b) {
@@ -14,7 +12,6 @@ function hexToRgb(hex) {
     } : null;
   }
   
-  // function from https://stackoverflow.com/a/9733420/3695983                     
   function luminance(r, g, b) {
     var a = [r, g, b].map(function (v) {
       v /= 255;
