@@ -1,3 +1,5 @@
+<contrast-ratio [fillColor]="fillColor"></contrast-ratio>
+
 <storybook-nav
   link1="Campaigns"
   link2="Subscribers"
@@ -10,13 +12,10 @@
   icon="fas fa-edit"
 ></storybook-header>
 
-<constrast-ratio [fillColor]="fillColor"></constrast-ratio>
-
 <storybook-funnel-bar
   [title]="'Targeted'"
   id="targeted"
   [cssClass]="'funnel-bar'"
-  [fillColor]="fillColor"
   [amount]="1500"
   [percentage]="100"
   [parentPercentage]="100"
@@ -24,7 +23,6 @@
 <storybook-funnel-bar
   [title]="'Engaged'"
   [cssClass]="'funnel-bar'"
-  [fillColor]="fillColor"
   [amount]="1050"
   [percentage]="70"
   [parentPercentage]="100"
@@ -32,7 +30,6 @@
 <storybook-funnel-bar
   [title]="'Applied'"
   [cssClass]="'funnel-bar'"
-  [fillColor]="fillColor"
   [amount]="450"
   [percentage]="30"
   [parentPercentage]="70"
@@ -40,7 +37,6 @@
 <storybook-funnel-bar
   [title]="'Processed'"
   [cssClass]="'funnel-bar'"
-  [fillColor]="fillColor"
   [amount]="225"
   [percentage]="15"
   [parentPercentage]="30"
@@ -48,7 +44,6 @@
 <storybook-funnel-bar
   [title]="'Processed'"
   [cssClass]="'funnel-bar'"
-  [fillColor]="fillColor"
   [amount]="195"
   [percentage]="13"
   [parentPercentage]="15"

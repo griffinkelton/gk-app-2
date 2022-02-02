@@ -1,7 +1,7 @@
  <svg [attr.height]='[V]' [attr.width]='[p0]'>
     <g>
       <path [attr.d]='details' fill-opacity='0.5'></path>
-      <text x="50%" y="50%" dominant-baseline ="middle">
+      <text x="50%" y="50%" dominant-baseline ="middle" [ngStyle]="{ 'fill': flag ? 'var(--colorA)' : 'var(--colorB)' }">
           {{d0 * 100}}%
       </text>
     </g>

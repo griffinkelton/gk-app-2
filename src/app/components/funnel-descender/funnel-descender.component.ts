@@ -42,6 +42,9 @@ export class sbFunnelDescender implements OnInit {
 
   firstBar: number = 630;
 
+  @Input()
+  flag: boolean;
+
   bW0: number;
   diff0: number;
   diff0x: number;

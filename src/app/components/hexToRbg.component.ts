@@ -11,12 +11,12 @@ import {
 declare function calculateRatio(color1, color2): any;
 
 @Component({
-  selector: 'constrast-ratio',
-  template: ` <div data-ratio="" style="display:none;" #ratio></div>`,
+  selector: 'contrast-ratio',
+  template: ` <div data-ratio="" #ratio style="display: none;"></div>`,
 })
 export class contRatio implements OnInit, AfterViewInit {
   @Input()
-  fillColor?: string;
+  fillColor: string;
 
   textColor: string = '#ffffff';
 
@@ -29,6 +29,5 @@ export class contRatio implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.dataRatio = this.input.nativeElement.getAttribute('data-ratio');
-    console.log(this.dataRatio);
   }
 }
