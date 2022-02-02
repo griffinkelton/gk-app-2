@@ -11,6 +11,7 @@ import { sbLineComponent } from './components/line/line.component';
 import { sbFunnelBar } from './components/funnel-bar/funnel-bar.component';
 import { sbFunnelDescender } from './components/funnel-descender/funnel-descender.component';
 import { contRatio } from './components/hexToRbg.component';
+import { sbPageComponent } from './components/page/page.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +22,11 @@ import { contRatio } from './components/hexToRbg.component';
     sbLineComponent,
     sbFunnelBar,
     sbFunnelDescender,
-    contRatio
+    contRatio,
+    sbPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

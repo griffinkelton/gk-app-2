@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'storybook-page',
-  template: `
-  `,
+  template: ``,
   styleUrls: ['./page.css'],
 })
 export class sbPageComponent {}

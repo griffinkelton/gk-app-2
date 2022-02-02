@@ -1,4 +1,4 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 /* SVG formula for funnel descender
 
@@ -28,40 +28,52 @@ For example:
   selector: 'storybook-funnel-descender',
   templateUrl: './funnel-descender.svg',
   styleUrls: ['./funnel-descender.css'],
-  inputs: ['data-drop']
 })
+export class sbFunnelDescender implements OnInit {
+  math = Math;
 
-export class sbFunnelDescender implements OnInit{
+  readonly Ox: number = 0;
+  readonly Oy: number = 0;
 
-math = Math;
+  readonly V: number = 36; //height
 
-readonly Ox: number = 0;
-readonly Oy: number = 0;
+  @Input()
+  p0: number; //parentWidth
 
-readonly V: number = 36; //height
+  firstBar: number = 630;
 
-@Input()
-p0: number; //parentWidth
+  bW0: number;
+  diff0: number;
+  diff0x: number;
+  bRx: number;
+  bLx: number;
 
-firstBar: number = 630;
+  @Input()
+  d0: number;
 
-bW0: number
-diff0: number;
-diff0x: number;
-bRx: number;
-bLx: number
+  details: string;
 
-@Input()
-d0: number;
-
-details: string;
-
-ngOnInit(): void {
-  this.bW0 = this.firstBar * this.d0; // 441, 189, 94.5
-  this.diff0 = this.p0 - this.bW0; // 189, 441, 94.5
-  this.diff0x = this.diff0/2; // 94.5, 220.5, 47.25
-  this.bRx = this.p0 - this.diff0x; // 535.5, 409.5 --> 409 - 94.5 = 315, 141.25
-  this.bLx = this.Ox + this.diff0x; // 94.5, 220.5 --> 220.5 - 94.5 = 126, 47.25
-  this.details = 'M '+ this.Ox + ' ' + this.Oy + ' H ' + this.p0 + ' L ' + this.bRx + ' ' + this.V + ' L ' + this.bLx + ' ' + this.V + ' Z';
-}
+  ngOnInit(): void {
+    this.bW0 = this.firstBar * this.d0; // 441, 189, 94.5
+    this.diff0 = this.p0 - this.bW0; // 189, 441, 94.5
+    this.diff0x = this.diff0 / 2; // 94.5, 220.5, 47.25
+    this.bRx = this.p0 - this.diff0x; // 535.5, 409.5 --> 409 - 94.5 = 315, 141.25
+    this.bLx = this.Ox + this.diff0x; // 94.5, 220.5 --> 220.5 - 94.5 = 126, 47.25
+    this.details =
+      'M ' +
+      this.Ox +
+      ' ' +
+      this.Oy +
+      ' H ' +
+      this.p0 +
+      ' L ' +
+      this.bRx +
+      ' ' +
+      this.V +
+      ' L ' +
+      this.bLx +
+      ' ' +
+      this.V +
+      ' Z';
+  }
 }
