@@ -22,7 +22,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-53c1f54e6e48d15c576a5396184946bbda6a5c3dfa4980b56348ae6d309058d97478bd1ae0f793606faaca01d12b514196c873c0680183bcb7afd7859d42ad61",
+            "id": "component-AppComponent-fd7b86cd4bc7c8edfd9af127d4b6e7f27d4f9b413c0d29948629a4842993df4f45ccd57ce0a5786c66a41703b81a593a0c317acba0d47bb66a2957da33260a85",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -70,7 +70,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'gk-app';\n  fillColor='#cc0000';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss'],\n})\nexport class AppComponent {\n  title = 'gk-app';\n  fillColor = '#cc0000';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -79,7 +79,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<storybook-nav link1=\"Campaigns\" link2=\"Subscribers\" link3=\"Email Templates\"></storybook-nav>\n<storybook-header title='Campaigns' cta='New Campaign' icon='far fa-edit'></storybook-header>\n\n<storybook-funnel-bar [title]=\"'Targeted'\" id='targeted' [cssClass]=\"'funnel-bar'\" [fillColor]=\"fillColor\" [amount]=\"1500\" [percentage]=\"100\" [parentPercentage]=\"100\"></storybook-funnel-bar>\n<storybook-funnel-bar [title]=\"'Engaged'\" [cssClass]=\"'funnel-bar'\" [fillColor]=\"fillColor\" [amount]=\"1050\" [percentage]=\"70\" [parentPercentage]=\"100\"></storybook-funnel-bar>\n<storybook-funnel-bar [title]=\"'Applied'\" [cssClass]=\"'funnel-bar'\" [fillColor]=\"fillColor\" [amount]=\"450\" [percentage]=\"30\" [parentPercentage]=\"70\"></storybook-funnel-bar>\n<storybook-funnel-bar [title]=\"'Processed'\" [cssClass]=\"'funnel-bar'\" [fillColor]=\"fillColor\" [amount]=\"225\" [percentage]=\"15\" [parentPercentage]=\"30\"></storybook-funnel-bar>\n<storybook-funnel-bar [title]=\"'Processed'\" [cssClass]=\"'funnel-bar'\" [fillColor]=\"fillColor\" [amount]=\"195\" [percentage]=\"13\" [parentPercentage]=\"15\"></storybook-funnel-bar>\n\n<router-outlet></router-outlet>"
+            "templateData": "<contrast-ratio [fillColor]=\"fillColor\"></contrast-ratio>\n\n<storybook-nav\n  link1=\"Campaigns\"\n  link2=\"Subscribers\"\n  link3=\"Email Templates\"\n></storybook-nav>\n\n<storybook-header\n  title=\"Campaigns\"\n  cta=\"New Campaign\"\n  icon=\"fas fa-edit\"\n></storybook-header>\n\n<storybook-funnel-bar\n  [title]=\"'Targeted'\"\n  id=\"targeted\"\n  [cssClass]=\"'funnel-bar'\"\n  [amount]=\"1500\"\n  [percentage]=\"100\"\n  [parentPercentage]=\"100\"\n></storybook-funnel-bar>\n<storybook-funnel-bar\n  [title]=\"'Engaged'\"\n  [cssClass]=\"'funnel-bar'\"\n  [amount]=\"1050\"\n  [percentage]=\"70\"\n  [parentPercentage]=\"100\"\n></storybook-funnel-bar>\n<storybook-funnel-bar\n  [title]=\"'Applied'\"\n  [cssClass]=\"'funnel-bar'\"\n  [amount]=\"450\"\n  [percentage]=\"30\"\n  [parentPercentage]=\"70\"\n></storybook-funnel-bar>\n<storybook-funnel-bar\n  [title]=\"'Processed'\"\n  [cssClass]=\"'funnel-bar'\"\n  [amount]=\"225\"\n  [percentage]=\"15\"\n  [parentPercentage]=\"30\"\n></storybook-funnel-bar>\n<storybook-funnel-bar\n  [title]=\"'Processed'\"\n  [cssClass]=\"'funnel-bar'\"\n  [amount]=\"195\"\n  [percentage]=\"13\"\n  [parentPercentage]=\"15\"\n></storybook-funnel-bar>\n\n<router-outlet></router-outlet>\n"
         },
         {
             "name": "ButtonComponent",
@@ -204,6 +204,106 @@
                     }
                 }
             }
+        },
+        {
+            "name": "contRatio",
+            "id": "component-contRatio-d11069b9119e08285a602b60f8350496ef0ce455aa48a97cc97e5638c5fcde8c73f348eb5b642cfd899d8a3c7a80ced201cf54413f8c8d99852476ead0e6d2dc",
+            "file": "src/app/components/hexToRbg.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "contrast-ratio",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div data-ratio=\"\" #ratio style=\"display: none;\"></div>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "fillColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "dataRatio",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                },
+                {
+                    "name": "input",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef",
+                    "optional": false,
+                    "description": "",
+                    "line": 23,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'ratio'"
+                        }
+                    ]
+                },
+                {
+                    "name": "textColor",
+                    "defaultValue": "'#ffffff'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 21
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngAfterViewInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 30,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 26,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\n  Component,\n  OnInit,\n  Input,\n  AfterViewInit,\n  ViewChild,\n  ElementRef,\n} from '@angular/core';\n\n// declare the javascript function here\ndeclare function calculateRatio(color1, color2): any;\n\n@Component({\n  selector: 'contrast-ratio',\n  template: ` <div data-ratio=\"\" #ratio style=\"display: none;\"></div>`,\n})\nexport class contRatio implements OnInit, AfterViewInit {\n  @Input()\n  fillColor: string;\n\n  textColor: string = '#ffffff';\n\n  @ViewChild('ratio') input: ElementRef;\n  dataRatio: number;\n\n  ngOnInit() {\n    calculateRatio(this.fillColor, this.textColor); // function call\n  }\n\n  ngAfterViewInit(): void {\n    this.dataRatio = this.input.nativeElement.getAttribute('data-ratio');\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "implements": [
+                "OnInit",
+                "AfterViewInit"
+            ]
         },
         {
             "name": "HeaderComponent",
@@ -579,7 +679,7 @@
         },
         {
             "name": "sbFunnelBar",
-            "id": "component-sbFunnelBar-87e2771e0b23b4a515bce0591f8533839a3fd1e16ed61bfe7e18661ccaace23dd9dcb5d481da4e437e12bf9152d762bc368962894be5fb32554f0870c58b7e0a",
+            "id": "component-sbFunnelBar-7268b8fdbf59c11097790680d57e96a5f28a506818e979d3801c1059c4026eaa70e928f9649f62b9e3980f756dfe4b7d7d8ea53d04a805526b60ce570bbcd6bb",
             "file": "src/app/components/funnel-bar/funnel-bar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -591,7 +691,7 @@
                 "./funnel-bar.css"
             ],
             "styles": [],
-            "template": "  <div class=\"funnel\">\n    <div class='funnel-title'>{{ title }}</div>\n    <div style='width:630px;'>\n    <storybook-funnel-descender *ngIf = \"percentage < 100\" [d0]=\"percentage/100\" [p0]=\"parentPercentage*0.01*630\"></storybook-funnel-descender>\n    <div style='width: calc({{percentage}}*0.01*630px);'\n      [ngClass]='[cssClass]'\n      id=\"{{ id }}\">\n        {{amount | number:'1.0'}}\n    </div>\n    </div>\n    <div class='funnel-percentage'>{{percentage | number:'1.2-2'}}% </div>\n</div>\n",
+            "template": "<div class=\"funnel\">\n  <div class=\"funnel-title\">{{ title }}</div>\n  <div style=\"width:630px;\">\n    <div class=\"svg\">\n      <storybook-funnel-descender\n        *ngIf=\"percentage < 100\"\n        [d0]=\"percentage / 100\"\n        [p0]=\"parentPercentage * 0.01 * 630\"\n        [flag]=\"flag\"\n      ></storybook-funnel-descender>\n    </div>\n    <div\n      style=\"width: calc({{ percentage }}*0.01*630px);\"\n      [ngClass]=\"[cssClass]\"\n      [ngStyle]=\"{ color: flag ? 'var(--colorA)' : 'var(--colorB)' }\"\n      id=\"{{ id }}\"\n    >\n      {{ amount | number: '1.0' }}\n    </div>\n  </div>\n  <div class=\"funnel-percentage\">{{ percentage | number: '1.2-2' }}%</div>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -599,7 +699,7 @@
                     "name": "amount",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 34,
+                    "line": 48,
                     "type": "number",
                     "decorators": []
                 },
@@ -607,7 +707,7 @@
                     "name": "cssClass",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 25,
+                    "line": 39,
                     "type": "string",
                     "decorators": []
                 },
@@ -615,7 +715,7 @@
                     "name": "fillColor",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 28,
+                    "line": 42,
                     "type": "string",
                     "decorators": []
                 },
@@ -623,7 +723,7 @@
                     "name": "id",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 43,
+                    "line": 57,
                     "type": "string",
                     "decorators": []
                 },
@@ -631,7 +731,7 @@
                     "name": "parentPercentage",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 40,
+                    "line": 54,
                     "type": "number",
                     "decorators": []
                 },
@@ -639,7 +739,7 @@
                     "name": "percentage",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 37,
+                    "line": 51,
                     "type": "number",
                     "decorators": []
                 },
@@ -647,14 +747,80 @@
                     "name": "title",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 31,
+                    "line": 45,
                     "type": "string",
                     "decorators": []
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "child",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 61
+                },
+                {
+                    "name": "child2",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 62
+                },
+                {
+                    "name": "child3",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 63
+                },
+                {
+                    "name": "child4",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 64
+                },
+                {
+                    "name": "child5",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 65
+                },
+                {
+                    "name": "flag",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 67
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 69,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -662,25 +828,52 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input} from '@angular/core';\n\n@Component({\n  selector: 'storybook-funnel-bar',\n  template: `\n  <div class=\"funnel\">\n    <div class='funnel-title'>{{ title }}</div>\n    <div style='width:630px;'>\n    <storybook-funnel-descender *ngIf = \"percentage < 100\" [d0]=\"percentage/100\" [p0]=\"parentPercentage*0.01*630\"></storybook-funnel-descender>\n    <div style='width: calc({{percentage}}*0.01*630px);'\n      [ngClass]='[cssClass]'\n      id=\"{{ id }}\">\n        {{amount | number:'1.0'}}\n    </div>\n    </div>\n    <div class='funnel-percentage'>{{percentage | number:'1.2-2'}}% </div>\n</div>\n  `,\n  styleUrls: ['./funnel-bar.css'],\n})\n\nexport class sbFunnelBar {\n\n  @Input()\n  cssClass?: string;\n\n  @Input()\n  fillColor?: string;\n\n  @Input()\n  title?:string;\n\n  @Input()\n  amount?: number;\n  \n  @Input()\n  percentage: number;\n\n  @Input()\n  parentPercentage: number;\n\n  @Input()\n  id?: string;\n\n\n}",
+            "sourceCode": "import {\n  Component,\n  Input,\n  OnInit,\n  ElementRef,\n  ContentChild,\n} from '@angular/core';\n\n@Component({\n  selector: 'storybook-funnel-bar',\n  template: `\n    <div class=\"funnel\">\n      <div class=\"funnel-title\">{{ title }}</div>\n      <div style=\"width:630px;\">\n        <div class=\"svg\">\n          <storybook-funnel-descender\n            *ngIf=\"percentage < 100\"\n            [d0]=\"percentage / 100\"\n            [p0]=\"parentPercentage * 0.01 * 630\"\n            [flag]=\"flag\"\n          ></storybook-funnel-descender>\n        </div>\n        <div\n          style=\"width: calc({{ percentage }}*0.01*630px);\"\n          [ngClass]=\"[cssClass]\"\n          [ngStyle]=\"{ color: flag ? 'var(--colorA)' : 'var(--colorB)' }\"\n          id=\"{{ id }}\"\n        >\n          {{ amount | number: '1.0' }}\n        </div>\n      </div>\n      <div class=\"funnel-percentage\">{{ percentage | number: '1.2-2' }}%</div>\n    </div>\n  `,\n  styleUrls: ['./funnel-bar.css'],\n})\nexport class sbFunnelBar implements OnInit {\n  @Input()\n  cssClass?: string;\n\n  @Input()\n  fillColor?: string;\n\n  @Input()\n  title?: string;\n\n  @Input()\n  amount?: number;\n\n  @Input()\n  percentage: number;\n\n  @Input()\n  parentPercentage: number;\n\n  @Input()\n  id?: string;\n\n  constructor(private elRef: ElementRef) {}\n\n  child: any;\n  child2: any;\n  child3: any;\n  child4: any;\n  child5: number;\n\n  flag: boolean;\n\n  ngOnInit() {\n    this.child = this.elRef.nativeElement.parentElement['firstChild'];\n    this.child2 = this.child['firstChild'];\n    this.child3 = this.child2['attributes'];\n    this.child4 = this.child3['data-ratio'];\n    this.child5 = this.child4['value'];\n\n    if (this.child5 < 1 / 4.5) {\n      this.flag = true;\n    } else {\n      this.flag = false;\n    }\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import url(\"../../../brand.css\");\n\n.funnel {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.funnel-title {\n  margin-left: auto;\n  padding: 0 50px;\n}\n\n.funnel-percentage {\n  margin-right: auto;\n  padding: 0 50px;\n}\n\n.funnel-bar {\n  color: #ffffff;\n  justify-content: center;\n  display: flex;\n  align-items: center;\n  background-color: var(--brand-color);\n  font-size: 24px;\n  font-weight: bold;\n  line-height: 1.33;\n  height: 57px;\n  margin: auto;\n}\n\n.funnel-bar:hover {\n  font-size: 32px;\n  font-weight: bolder;\n  line-height: 1.25;\n}\n\n#targeted {\n  width: 630px;\n}\n",
+                    "data": "@import url(\"../../../brand.css\");\n\n.funnel {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: baseline;\n}\n\n.funnel-title {\n  margin-left: auto;\n  padding: 0 50px;\n  width: 100px;\n}\n\n.funnel-percentage {\n  margin-right: auto;\n  padding: 0 50px;\n}\n\n.funnel-bar {\n  justify-content: center;\n  display: flex;\n  align-items: center;\n  background-color: var(--brand-color);\n  font-size: 24px;\n  font-weight: bold;\n  line-height: 1.33;\n  height: 57px;\n  margin: auto;\n}\n\n.funnel-bar:hover {\n  font-size: 32px;\n  font-weight: bolder;\n  line-height: 1.25;\n}\n",
                     "styleUrl": "./funnel-bar.css"
                 }
             ],
-            "stylesData": ""
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "elRef",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 57,
+                "jsdoctags": [
+                    {
+                        "name": "elRef",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ]
         },
         {
             "name": "sbFunnelDescender",
-            "id": "component-sbFunnelDescender-78c5560a15f1c2a5eaefe8d11ef409e909aa4d53c209d7d0e28bb751717737ba836fad4ecceeef298f8e9a167133d2a496217054ce6810bf14f6ba2511cb9396",
+            "id": "component-sbFunnelDescender-d7d2e5180661c98bb78c0652b7648f51e448ff7edbde0f381f36437b97968b3e8f15b7a3cc06e14242d9ae366eb34acc117673d6fe472169a1d1e37fe58e570f",
             "file": "src/app/components/funnel-descender/funnel-descender.component.ts",
             "encapsulation": [],
             "entryComponents": [],
-            "inputs": [
-                "data-drop"
-            ],
+            "inputs": [],
             "outputs": [],
             "providers": [],
             "selector": "storybook-funnel-descender",
@@ -697,15 +890,23 @@
                     "name": "d0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 53,
+                    "line": 55,
                     "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "flag",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 46,
+                    "type": "boolean",
                     "decorators": []
                 },
                 {
                     "name": "p0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 44,
+                    "line": 41,
                     "type": "number",
                     "decorators": []
                 }
@@ -719,7 +920,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 50
+                    "line": 52
                 },
                 {
                     "name": "bRx",
@@ -728,7 +929,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 49
+                    "line": 51
                 },
                 {
                     "name": "bW0",
@@ -737,7 +938,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 46
+                    "line": 48
                 },
                 {
                     "name": "details",
@@ -746,7 +947,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 55
+                    "line": 57
                 },
                 {
                     "name": "diff0",
@@ -755,7 +956,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 47
+                    "line": 49
                 },
                 {
                     "name": "diff0x",
@@ -764,7 +965,17 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 48
+                    "line": 50
+                },
+                {
+                    "name": "firstBar",
+                    "defaultValue": "630",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 43
                 },
                 {
                     "name": "math",
@@ -774,7 +985,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 36
+                    "line": 33
                 },
                 {
                     "name": "Ox",
@@ -784,7 +995,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 38,
+                    "line": 35,
                     "modifierKind": [
                         144
                     ]
@@ -797,7 +1008,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 39,
+                    "line": 36,
                     "modifierKind": [
                         144
                     ]
@@ -810,7 +1021,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 41,
+                    "line": 38,
                     "modifierKind": [
                         144
                     ]
@@ -823,7 +1034,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 57,
+                    "line": 59,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -835,11 +1046,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit} from '@angular/core';\n\n/* SVG formula for funnel descender\n\nOrigin X (Ox) = 0\t\t\t\t← X coordinate for starting point\nOrigin Y (Oy) = 0\t\t\t\t← Y coordinate for starting point\nParent width (p0) = 630\t\t← value of step 0\nVertical line (V) = 36\t\t\t← height of descenders (constant)\ndrop (d0) = 0.7\t\t\t\t← percentage of p0 for step 1\np0 * d0 = bW0 = 441\t\t\t\t\t← bottom width of next step (630*0.7)\np0 - d0 = diff0 = 189\t\t← difference of p0 and d0 (630-441)\ndiff0 / 2  = diff0x = 94.5\t\t← X coordinate change (189/2)\np0 - diff0x = bRx = 535.5\t\t\t← bottom right X coordinate (630-94.5)\nOx + diff0x = bLx=  94.5\t\t\t\t← bottom left X coordinate (0 + 94.5)\n\nFor example:\n630 * 0.7 = 441\n630 - 441 = 189\n189 / 2 = 94.5\n630 - 94.5 = 535.5\n0 + 94.5 = 94.5\n\n<path d=‘M0 0 H 630 L 535.5 36 L 94.5 36 Z'><path>\n\n*/\n\n@Component({\n  selector: 'storybook-funnel-descender',\n  templateUrl: './funnel-descender.svg',\n  styleUrls: ['./funnel-descender.css'],\n  inputs: ['data-drop']\n})\n\nexport class sbFunnelDescender implements OnInit{\n\nmath = Math;\n\nreadonly Ox: number = 0;\nreadonly Oy: number = 0;\n\nreadonly V: number = 36; //height\n\n@Input()\np0: number; //width\n\nbW0: number\ndiff0: number;\ndiff0x: number;\nbRx: number;\nbLx: number\n\n@Input()\nd0: number;\n\ndetails: string;\n\nngOnInit(): void {\n  this.bW0 = this.p0*this.d0; 189\n  this.diff0 = this.p0-this.bW0; 441\n  this.diff0x = this.diff0/2; 220.5\n  this.bRx = this.p0 - this.diff0x; 409.5\n  this.bLx = this.Ox + this.diff0x; 220.5\n  this.details = 'M '+ this.Ox + ' ' + this.Oy + ' H ' + this.p0 + ' L ' + this.bRx + ' ' + this.V + ' L ' + this.bLx + ' ' + this.V + ' Z';\n}\n}",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n/* SVG formula for funnel descender\n\nOrigin X (Ox) = 0\t\t\t\t← X coordinate for starting point\nOrigin Y (Oy) = 0\t\t\t\t← Y coordinate for starting point\nParent width (p0) = 630\t\t← value of step 0\nVertical line (V) = 36\t\t\t← height of descenders (constant)\ndrop (d0) = 0.7\t\t\t\t← percentage of p0 for step 1\np0 * d0 = bW0 = 441\t\t\t\t\t← bottom width of next step (630*0.7)\np0 - d0 = diff0 = 189\t\t← difference of p0 and d0 (630-441)\ndiff0 / 2  = diff0x = 94.5\t\t← X coordinate change (189/2)\np0 - diff0x = bRx = 535.5\t\t\t← bottom right X coordinate (630-94.5)\nOx + diff0x = bLx=  94.5\t\t\t\t← bottom left X coordinate (0 + 94.5)\n\nFor example:\n630 * 0.7 = 441\n630 - 441 = 189\n189 / 2 = 94.5\n630 - 94.5 = 535.5\n0 + 94.5 = 94.5\n\n<path d=‘M0 0 H 630 L 535.5 36 L 94.5 36 Z'><path>\n\n*/\n\n@Component({\n  selector: 'storybook-funnel-descender',\n  templateUrl: './funnel-descender.svg',\n  styleUrls: ['./funnel-descender.css'],\n})\nexport class sbFunnelDescender implements OnInit {\n  math = Math;\n\n  readonly Ox: number = 0;\n  readonly Oy: number = 0;\n\n  readonly V: number = 36; //height\n\n  @Input()\n  p0: number; //parentWidth\n\n  firstBar: number = 630;\n\n  @Input()\n  flag: boolean;\n\n  bW0: number;\n  diff0: number;\n  diff0x: number;\n  bRx: number;\n  bLx: number;\n\n  @Input()\n  d0: number;\n\n  details: string;\n\n  ngOnInit(): void {\n    this.bW0 = this.firstBar * this.d0; // 441, 189, 94.5\n    this.diff0 = this.p0 - this.bW0; // 189, 441, 94.5\n    this.diff0x = this.diff0 / 2; // 94.5, 220.5, 47.25\n    this.bRx = this.p0 - this.diff0x; // 535.5, 409.5 --> 409 - 94.5 = 315, 141.25\n    this.bLx = this.Ox + this.diff0x; // 94.5, 220.5 --> 220.5 - 94.5 = 126, 47.25\n    this.details =\n      'M ' +\n      this.Ox +\n      ' ' +\n      this.Oy +\n      ' H ' +\n      this.p0 +\n      ' L ' +\n      this.bRx +\n      ' ' +\n      this.V +\n      ' L ' +\n      this.bLx +\n      ' ' +\n      this.V +\n      ' Z';\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import url(\"../../../brand.css\");\n\nsvg {\n  fill: var(--brand-color);\n  display: block;\n  margin: auto;\n}\n\ntext {\n  fill: white;\n  text-anchor: middle;\n}\n",
+                    "data": "@import url(\"../../../brand.css\");\n\nsvg {\n  fill: var(--brand-color);\n  margin: auto;\n  display: flex;\n}\n\ntext {\n  text-anchor: middle;\n}\n",
                     "styleUrl": "./funnel-descender.css"
                 }
             ],
@@ -847,7 +1058,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": " <svg #bar [attr.height]='[V]' [attr.width]='[p0]'>\n    <g>\n      <path [attr.d]='details' fill-opacity='0.5'></path>\n      <text x=\"50%\" y=\"50%\" dominant-baseline =\"middle\">\n          {{d0 * 100}}%\n      </text>\n    </g>\n  </svg>"
+            "templateData": " <svg [attr.height]='[V]' [attr.width]='[p0]'>\n    <g>\n      <path [attr.d]='details' fill-opacity='0.5'></path>\n      <text x=\"50%\" y=\"50%\" dominant-baseline =\"middle\" [ngStyle]=\"{ 'fill': flag ? 'var(--colorA)' : 'var(--colorB)' }\">\n          {{d0 * 100}}%\n      </text>\n    </g>\n  </svg>"
         },
         {
             "name": "sbHeaderComponent",
@@ -985,7 +1196,7 @@
         },
         {
             "name": "sbPageComponent",
-            "id": "component-sbPageComponent-9b90fa2502af4e51237731b04cd31aa955d8ad5845d8634af8d7d04206fba8300cb94f79be4541338db64626d5f446e91a06f8de8ae4dac3374c397aea0865fb",
+            "id": "component-sbPageComponent-9d904b1a551c8066b0917643909d7e1ec5e95098085aa60dc75b1f098f083996c0196e10f57366e8d3d6ae09df2fd293a06a11e887cb657fdb3282067b39bda9",
             "file": "src/app/components/page/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -997,7 +1208,7 @@
                 "./page.css"
             ],
             "styles": [],
-            "template": "<storybook-nav></storybook-nav>\n<storybook-header></storybook-header>\n",
+            "template": "",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [],
@@ -1011,7 +1222,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'storybook-page',\n  template: `\n  <storybook-nav></storybook-nav>\n  <storybook-header></storybook-header>\n  `,\n  styleUrls: ['./page.css'],\n})\nexport class sbPageComponent {}",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'storybook-page',\n  template: ``,\n  styleUrls: ['./page.css'],\n})\nexport class sbPageComponent {}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1025,13 +1236,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-485fc50ed53738bbd259164040441c6d5ccb47c15b2eb40c1b1d05601ebfa025ec93561c27796550a01d9da91081cf32a905651e02aa2e61ef800e6688cf7358",
+            "id": "module-AppModule-9a7e123948f8937a25eaac4b38d69c0e59a1e53594ef867dc6bb2f07706fe861c08237d310b38562f56c6b2af0bc16859c0c63d0f3198672cd7454cbadf15bcf",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport { sbButtonComponent } from './components/button/button.component';\nimport { NavComponent } from './components/nav/nav.component';\nimport { sbHeaderComponent } from './components/header/header.component';\nimport { sbLineComponent } from './components/line/line.component';\nimport { sbFunnelBar } from './components/funnel-bar/funnel-bar.component';\nimport { sbFunnelDescender } from './components/funnel-descender/funnel-descender.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    sbButtonComponent,\n    NavComponent,\n    sbHeaderComponent,\n    sbLineComponent,\n    sbFunnelBar,\n    sbFunnelDescender\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport { sbButtonComponent } from './components/button/button.component';\nimport { NavComponent } from './components/nav/nav.component';\nimport { sbHeaderComponent } from './components/header/header.component';\nimport { sbLineComponent } from './components/line/line.component';\nimport { sbFunnelBar } from './components/funnel-bar/funnel-bar.component';\nimport { sbFunnelDescender } from './components/funnel-descender/funnel-descender.component';\nimport { contRatio } from './components/hexToRbg.component';\nimport { sbPageComponent } from './components/page/page.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    sbButtonComponent,\n    NavComponent,\n    sbHeaderComponent,\n    sbLineComponent,\n    sbFunnelBar,\n    sbFunnelDescender,\n    contRatio,\n    sbPageComponent,\n  ],\n  imports: [BrowserModule, AppRoutingModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -1047,6 +1258,9 @@
                             "name": "NavComponent"
                         },
                         {
+                            "name": "contRatio"
+                        },
+                        {
                             "name": "sbButtonComponent"
                         },
                         {
@@ -1060,6 +1274,9 @@
                         },
                         {
                             "name": "sbLineComponent"
+                        },
+                        {
+                            "name": "sbPageComponent"
                         }
                     ]
                 },
@@ -1172,21 +1389,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: false\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false\n}"
             },
             {
                 "name": "Header",
@@ -1331,21 +1548,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": ".storybook/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Header>",
-                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": ".storybook/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Button>",
                 "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": ".storybook/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Header>",
+                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1391,24 +1608,69 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/line/line.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<sbLineComponent>",
-                "defaultValue": "(args: sbLineComponent) => ({\n    props: args,\n  })"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/nav/nav.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<NavComponent>",
                 "defaultValue": "(args: NavComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/line/line.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<sbLineComponent>",
+                "defaultValue": "(args: sbLineComponent) => ({\n    props: args,\n  })"
             }
         ],
-        "functions": [],
+        "functions": [
+            {
+                "name": "calculateRatio",
+                "file": "src/app/components/hexToRbg.component.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "color1",
+                        "type": "",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "color2",
+                        "type": "",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "returnType": "any",
+                "jsdoctags": [
+                    {
+                        "name": "color1",
+                        "type": "",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "color2",
+                        "type": "",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
@@ -1499,18 +1761,6 @@
                     "defaultValue": "(args: NavComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: false\n}"
-                }
-            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -1521,6 +1771,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false\n}"
                 }
             ],
             "src/app/components/line/line.stories.ts": [
@@ -1714,7 +1976,54 @@
                 }
             ]
         },
-        "groupedFunctions": {},
+        "groupedFunctions": {
+            "src/app/components/hexToRbg.component.ts": [
+                {
+                    "name": "calculateRatio",
+                    "file": "src/app/components/hexToRbg.component.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "color1",
+                            "type": "",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "color2",
+                            "type": "",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "returnType": "any",
+                    "jsdoctags": [
+                        {
+                            "name": "color1",
+                            "type": "",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "color2",
+                            "type": "",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
         "groupedEnumerations": {},
         "groupedTypeAliases": {}
     },
@@ -1946,7 +2255,7 @@
                 "linktype": "component",
                 "name": "sbFunnelBar",
                 "coveragePercent": 0,
-                "coverageCount": "0/8",
+                "coverageCount": "0/16",
                 "status": "low"
             },
             {
@@ -1975,7 +2284,7 @@
                 "linktype": "component",
                 "name": "sbFunnelDescender",
                 "coveragePercent": 0,
-                "coverageCount": "0/14",
+                "coverageCount": "0/16",
                 "status": "low"
             },
             {
@@ -2003,6 +2312,25 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/hexToRbg.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "contRatio",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/hexToRbg.component.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "calculateRatio",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

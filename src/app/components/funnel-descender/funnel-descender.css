@@ -2,8 +2,8 @@
 
 svg {
   fill: var(--brand-color);
-  display: block;
   margin: auto;
+  display: flex;
 }
 
 text {

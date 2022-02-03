@@ -57,11 +57,12 @@ export class sbFunnelDescender implements OnInit {
   details: string;
 
   ngOnInit(): void {
-    this.bW0 = this.firstBar * this.d0; // 441, 189, 94.5
-    this.diff0 = this.p0 - this.bW0; // 189, 441, 94.5
-    this.diff0x = this.diff0 / 2; // 94.5, 220.5, 47.25
-    this.bRx = this.p0 - this.diff0x; // 535.5, 409.5 --> 409 - 94.5 = 315, 141.25
-    this.bLx = this.Ox + this.diff0x; // 94.5, 220.5 --> 220.5 - 94.5 = 126, 47.25
+    this.p0 = this.math.round((this.p0 * 10) / 10);
+    this.bW0 = this.math.round((this.firstBar * this.d0 * 10) / 10); // 441, 189, 94.5
+    this.diff0 = this.math.round(((this.p0 - this.bW0) * 10) / 10); // 189, 441, 94.5
+    this.diff0x = this.math.round(((this.diff0 / 2) * 10) / 10); // 94.5, 220.5, 47.25
+    this.bRx = this.math.round(((this.p0 - this.diff0x) * 10) / 10); // 535.5, 409.5 --> 409 - 94.5 = 315, 141.25
+    this.bLx = this.math.round(((this.Ox + this.diff0x) * 10) / 10); // 94.5, 220.5 --> 220.5 - 94.5 = 126, 47.25
     this.details =
       'M ' +
       this.Ox +
